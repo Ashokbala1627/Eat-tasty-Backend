@@ -15,7 +15,6 @@ app.use(express.json());
 
 app.use("/", userRouter);
 
-const mongoose = require("mongoose");
 mongoose
   .connect(
     "mongodb+srv://AshokBala:Ashok12341627@cluster0.ik4ijvh.mongodb.net/",

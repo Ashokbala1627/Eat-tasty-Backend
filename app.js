@@ -1,9 +1,17 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const userRouter = require("./router/userRoutes");
-app.use(express.json());
+const mongoose = require("mongoose");
+const route = require("./router");
 
 const port = 1212;
+
+app.use(cors({
+  origin: "",
+  methods: ["GET", "POST", "PUT", "DELETE"], // specify the allowed HTTP methods
+}));
+app.use(express.json());
 
 app.use("/", userRouter);
 
@@ -23,5 +31,4 @@ mongoose
     console.log(err);
   });
 
-const route = require("./router");
 app.use("/", route);

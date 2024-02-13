@@ -8,7 +8,7 @@ const route = require("./router");
 const port = 1212;
 
 app.use(cors({
-  origin: "https://eat-tasty-frontend-zvbc.vercel.app/",
+  origin: "https://eat-tasty-frontend-zvbc.vercel.app",
   methods: ["GET", "POST", "PUT", "DELETE"], // specify the allowed HTTP methods
 }));
 app.use(express.json());
